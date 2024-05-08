@@ -1,11 +1,13 @@
-import Wrapper from "@/components/Wrapper";
 import Link from "next/link";
-import { buttonVariants } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Wrapper from "@/components/Wrapper";
+import { buttonVariants } from "@/components/ui/button";
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
-export default function Navbar() {
-  const user = undefined;
-  const isAdmin = undefined;
+export default async function Navbar() {
+  const { getUser } = getKindeServerSession();
+  const user = await getUser();
+  const isAdmin = user?.email === process.env.ADMIN_EMAIL;
   return (
     <nav className="sticky inset-x-0 top-0 z-[100] h-14 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
       <Wrapper>
