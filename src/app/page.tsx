@@ -1,5 +1,6 @@
 import Intro from "@/components/home/Intro";
-import { Reviews } from "@/components/home/Reviews";
+import KindaFooter from "@/components/home/KindaFooter";
+import Reviews from "@/components/home/reviews/Reviews";
 import ValueProposition from "@/components/home/ValueProposition";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Intro />
       <ValueProposition />
       <Reviews />
+      <KindaFooter />
     </main>
   );
 }

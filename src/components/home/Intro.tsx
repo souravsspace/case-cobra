@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Phone from "@/components/Phone";
+import Phone from "@/components/home/Phone";
 import { Icons } from "@/components/Icons";
 import Wrapper from "@/components/Wrapper";
 
